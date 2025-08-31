@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
+CORS(app)  # <-- allows requests from any domain (including Amplify)
 
 API_KEY = "c21b527dabeec6a2d68ac42d64a76db0"  # replace with your key
 
